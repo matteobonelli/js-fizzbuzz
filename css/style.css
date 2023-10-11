@@ -3,15 +3,14 @@
 }
 
 .my-container{
-    width: 1000px;
+    width: 980px;
     margin: 0 auto;
 }
 .my-bg-box{
     background-color: #1389b2;
 }
 .box{
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 20px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
 }

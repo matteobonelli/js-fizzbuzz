@@ -1,33 +1,35 @@
 const myContainer = document.getElementById('container');
 
-let text = ''
+
 
 for(let i = 1; i <= 100; i++){
     let bgBox;
+    const fizz = 'Fizz';
+    const buzz = 'Buzz';
+    const fizzBuzz = 'FizzBuzz';
+    const boxEl = document.createElement('div');
     if(i % 15 === 0){
-        const fizzBuzz = 'FizzBuzz';
-        text = fizzBuzz;
         bgBox = 'bg-danger';
-        console.log(text);
+        boxEl.innerHTML = fizzBuzz;
+        console.log(fizzBuzz);
     }
     else if(i % 3 === 0){
-        const fizz = 'Fizz';
-        text = fizz;
         bgBox = 'bg-success';
-        console.log(text);
+        boxEl.innerHTML = fizz;
+        console.log(fizz);
     }
     else if(i % 5 === 0){
-        const buzz = 'Buzz';
-        text = buzz;
         bgBox = 'bg-warning';
-        console.log(text);
+        boxEl.innerHTML = buzz;
+        console.log(buzz);
     }
     else{
         console.log(i);
         bgBox = 'my-bg-box';
+        boxEl.innerHTML = i;
     }
-    const boxEl = document.createElement('div');
-    boxEl.className = `box ${bgBox} d-flex justify-content-center align-items-center`;
+    
+    boxEl.className = `box ${bgBox} d-flex justify-content-center align-items-center fw-bold fs-4 shadow`;
     myContainer.append(boxEl);
 }
 
